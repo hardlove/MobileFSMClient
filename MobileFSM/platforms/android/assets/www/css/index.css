@@ -120,3 +120,29 @@ h1 {
     
     text-align:center;
 }
+
+._wrap {
+  display:table;
+  border:0px solid transparent;
+  /*background-color:transparent;*/
+  width:100%;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+}
+._subwrap {
+    /*background-color: red;*/
+  vertical-align:middle;
+  display:table-cell;
+  position:absolute;
+  top:50%;
+}
+_.content { 
+  /*background-color: transparent;*/
+  position:absolute;
+  text-align: center;
+  top:-50%;
+}
+._empty_tips {
+    font-size: 20px;
+}
