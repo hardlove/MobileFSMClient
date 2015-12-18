@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MobileFSM HTML</title>
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="author" content="chenlu@globalroam.com">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.5.7/css/sm.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.5.7/css/??sm.min.css,sm-extend.css">
+    <!-- <link rel="stylesheet" href="css/sm-extend.css"> -->
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="page" id="page-new-offine" >
+      <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back" >Back</a>
+        <h1 class="title">New Offine E-CAF</h1>
+      </header>
+      <!-- 内容填充区 -->
+      <div class="content">
+        <div class="conten-padded">
+          <!-- top content -->
+          <div class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label custom">Work Order</div>
+                    <div class="item-input">
+                      <input type="text" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label custom">Type Of</div>
+                    <div class="item-input">
+                      <input type="text" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label custom">Serial</div>
+                    <div class="item-input">
+                      <input type="text" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label custom">RFS Date</div>
+                    <div class="item-input">
+                      <input type="text" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- center content -->
+          <div class="list-block">
+            <div class="content-block-title">Service Details</div>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Visit Charge Hours</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Visit Charge Amount</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Over Time Surcharge Hours</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Parts</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Others</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Total Amount(estimated)</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label custom">Remarks</div>
+                      <div class="item-input">
+                        <input type="text" >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <input type="checkbox" name="checkbox" style="width: 1.3rem;height: 1.3rem;">
+                      <textarea style="font-size: 16px; text-align: justify;max-height: 7rem;min-height: 6rem;padding-left: 0.6rem;"  name="name_of_textarea" readonly="true">Yes,I/We understand that Starhub wants to serve my/our needs better and consent to starhub using my/our information to develop innovative products and services and releasing such relevant information to its Affiliates and other carefully selected.
+                      </textarea>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- bottom content-->
+          <div class="content-block">
+            <div class="row">
+                <div class="col-50" id="generate" onclick="alert('hello')"><a href="#" class="button button-big button-fill button-success">Generate</a></div>
+                <div class="col-50" id="reset"><a href="#" class="button button-big button-fill button-danger">Reset</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.5.7/js/sm.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.5.7/js/sm-extend.js' charset='utf-8'></script>
+  </body>
+</html>

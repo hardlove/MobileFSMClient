@@ -146,3 +146,17 @@ _.content {
 ._empty_tips {
     font-size: 20px;
 }
+
+
+
+.list-block .item-title.label.custom {
+    width: 65%;
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    margin: 4px 0;
+}
+
+
+

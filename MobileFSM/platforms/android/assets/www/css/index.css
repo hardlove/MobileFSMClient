@@ -146,3 +146,18 @@ _.content {
 ._empty_tips {
     font-size: 20px;
 }
+
+
+
+.custom {
+    width: 65%;
+    background-color: red;
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    margin: 4px 0;
+}
+
+
+
