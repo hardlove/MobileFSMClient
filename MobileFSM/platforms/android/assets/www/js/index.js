@@ -54,18 +54,26 @@ app.initialize();*/
 
 
 $(document).on("pageInit", function(e, pageId, $page) {
-      
+    //Login page event.
     if(pageId == "page-login") {
 
         alert("page-login");//第一个页面监听不到
 
     }
-    if(pageId == "page-offine") {
+    //Offine E-CAF page event.
+    else if(pageId == "page-offine") {
         alert("page-offine");
 
     }
-    if(pageId == "page-new-offine") {
+    //New Offine E-CAF page event.
+    else if(pageId == "page-new-offine") {
         alert("page-new-offine");
+        // var resetBtn = $(document).getElementById("reset");
+        $(document).on('click','#reset', function () {
+              
+            alert('Your name is ');
+            
+         });
 
     }
    
