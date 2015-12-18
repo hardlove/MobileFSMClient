@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+/*var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -48,4 +48,25 @@ var app = {
     }
 };
 
-app.initialize();
+app.initialize();*/
+
+
+
+
+$(document).on("pageInit", function(e, pageId, $page) {
+      
+    if(pageId == "page-login") {
+
+        alert("page-login");//第一个页面监听不到
+
+    }
+    if(pageId == "page-offine") {
+        alert("page-offine");
+
+    }
+    if(pageId == "page-new-offine") {
+        alert("page-new-offine");
+
+    }
+   
+});

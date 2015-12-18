@@ -149,15 +149,27 @@ _.content {
 
 
 
-.custom {
+.list-block .item-title.label.custom {
     width: 65%;
-    background-color: red;
     -webkit-flex-shrink: 0;
     -ms-flex: 0 0 auto;
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
     margin: 4px 0;
 }
-
-
+/**以下为默认样式修改**/
+.content-block-title {
+    position: relative;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+    text-transform: capitalize;/*手机上不起作用*/
+    line-height: 1;
+    color: #6d6d72;
+    margin: 1.75rem .75rem .5rem;
+}
 
