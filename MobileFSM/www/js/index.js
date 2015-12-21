@@ -79,14 +79,26 @@ $(function(){
 
     });
     //Offine E-CAF page event.
-    $(document).on("pageInit", "#page-offine", function(e, pageId, $page) {
+    $(document).on("pageInit", "#page-offine", function(e, id, page) {
         $.alert('page-offine inited');
         
     });
     //New Offine E-CAF page event.
-    $(document).on("pageInit", "#page-new-offine", function(e, pageId, $page) {
+    $(document).on("pageInit", "#page-new-offine", function(e, id, page) {
         $.alert('page-new-offine inited');
-        
+        var $content = $(page).find('.content');
+
+        $content.on('click','#id_generate',function(){
+            console.log("Generate...");
+            var str = getAllDatas();
+            $.alert(str);
+            
+        });
+        $content.on('click','#id_reset',function(){
+            console.log("reset ...");
+            resetAllDatas();
+            $.alert("haved reset all datas.");
+        });
     });
    
 
@@ -114,3 +126,29 @@ function login(user){
         return true;
     }
 }
+
+function getAllDatas(){
+    var list = document.getElementsByTagName("input");
+    var str = "";
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].type=="text") {
+            str+=list[i].value;
+            if (i!=list.length-1) {
+                str+=",";
+            }
+        }
+       
+    }
+  
+    return str;
+}
+function resetAllDatas(){
+    var list = document.getElementsByTagName("input");
+
+    for (var i = 0;i<list.length; i++) {
+        //判断是否为文本框
+        if(list[i].type=="text"){
+            list[i].value="";
+        }
+    }
+};
