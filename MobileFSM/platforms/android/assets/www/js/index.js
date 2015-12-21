@@ -74,7 +74,7 @@ $(function(){
         });
         $content.on('click','#id_sign_cancel',function () {
           $.alert('点击取消');
-          
+          resetAllDatas();
         });
 
     });
@@ -90,12 +90,23 @@ $(function(){
 
         $content.on('click','#id_generate',function(){
             console.log("Generate...");
-            var str = getAllDatas("page-new-offine");
-            $.alert(str);
+
+            var accepted = document.getElementById("id_checkbox");
+            if (accepted) {
+                var str = getAllDatas();
+                $.alert(str);
+                //some code...
+
+                $.router.back("offine_ecaf_page.html");
+            }else{
+                $.alert("Please accept the contract terms!");
+            }
+            
+            
         });
         $content.on('click','#id_reset',function(){
             console.log("reset ...");
-            resetAllDatas("page-new-offine");
+            resetAllDatas();
             $.alert("haved reset all datas.");
         });
     });
@@ -126,23 +137,25 @@ function login(user){
     }
 }
 
-function getAllDatas(pid){
-    var list = document.getElementsByTagName("li").getElementByTagName("input");
-    var str="";
-    for (var i = 0;i<list.length; i--) {
-        //判断是否为文本框
-        if(list[i].type=="text"){
+function getAllDatas(){
+    var list = document.getElementsByTagName("input");
+    var str = "";
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].type=="text") {
             str+=list[i].value;
             if (i!=list.length-1) {
                 str+=",";
             }
         }
+       
     }
+  
     return str;
 }
-function resetAllDatas(pid){
-    var list = document.getElementsByTagName("li").getElementByTagName("input");
-    for (var i = 0;i<list.length; i--) {
+function resetAllDatas(){
+    var list = document.getElementsByTagName("input");
+
+    for (var i = 0;i<list.length; i++) {
         //判断是否为文本框
         if(list[i].type=="text"){
             list[i].value="";

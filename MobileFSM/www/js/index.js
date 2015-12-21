@@ -74,7 +74,7 @@ $(function(){
         });
         $content.on('click','#id_sign_cancel',function () {
           $.alert('点击取消');
-          
+          resetAllDatas();
         });
 
     });
@@ -90,8 +90,18 @@ $(function(){
 
         $content.on('click','#id_generate',function(){
             console.log("Generate...");
-            var str = getAllDatas();
-            $.alert(str);
+
+            var accepted = document.getElementById("id_checkbox");
+            if (accepted) {
+                var str = getAllDatas();
+                $.alert(str);
+                //some code...
+
+                $.router.back("offine_ecaf_page.html");//完成后返回上一页面，并刷新页面
+            }else{
+                $.alert("Please accept the contract terms!");
+            }
+            
             
         });
         $content.on('click','#id_reset',function(){
