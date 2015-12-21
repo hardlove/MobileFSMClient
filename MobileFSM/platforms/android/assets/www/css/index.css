@@ -157,6 +157,13 @@ _.content {
     flex-shrink: 0;
     margin: 4px 0;
 }
+._checkbox_size {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+._text_padding {
+    padding-left: 0.6rem;
+}
 /**以下为默认样式修改**/
 .content-block-title {
     position: relative;

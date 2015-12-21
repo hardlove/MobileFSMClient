@@ -97,7 +97,7 @@ $(function(){
                 $.alert(str);
                 //some code...
 
-                $.router.back("offine_ecaf_page.html");
+                $.router.back("offine_ecaf_page.html");//完成后返回上一页面，并刷新页面
             }else{
                 $.alert("Please accept the contract terms!");
             }
