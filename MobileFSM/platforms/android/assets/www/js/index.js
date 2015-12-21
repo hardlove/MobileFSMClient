@@ -53,28 +53,35 @@ app.initialize();*/
 
 
 
-$(document).on("pageInit", function(e, pageId, $page) {
+$(function(){
+    'use strict'
+
     //Login page event.
-    if(pageId == "page-login") {
+    $(document).on("pageInit", "#page-login", function(e, id, page) {
 
-        alert("page-login");//第一个页面监听不到
+        var $content = $(page).find('.content');
+        $content.on('click','#id_sing_in',function () {
+          $.alert('点击登录');
 
-    }
+        });
+        $content.on('click','#id_sing_cancel',function () {
+          $.alert('点击取消');
+          
+        });
+
+    });
     //Offine E-CAF page event.
-    else if(pageId == "page-offine") {
-        alert("page-offine");
-
-    }
+    $(document).on("pageInit", "#page-offine", function(e, pageId, $page) {
+        $.alert('Here goes alert text', 'Custom Title!');
+        
+    });
     //New Offine E-CAF page event.
-    else if(pageId == "page-new-offine") {
-        alert("page-new-offine");
-        // var resetBtn = $(document).getElementById("reset");
-        $(document).on('click','#reset', function () {
-              
-            alert('Your name is ');
-            
-         });
-
-    }
+    $(document).on("pageInit", "#page-new-offine", function(e, pageId, $page) {
+        $.alert('Here goes alert text', 'Custom Title!');
+        
+    });
    
+
+    
+    $.init();
 });
