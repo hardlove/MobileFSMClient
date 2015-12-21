@@ -58,13 +58,21 @@ $(function(){
 
     //Login page event.
     $(document).on("pageInit", "#page-login", function(e, id, page) {
-
+        $.alert('page-login inited');
         var $content = $(page).find('.content');
-        $content.on('click','#id_sing_in',function () {
-          $.alert('点击登录');
+        $content.on('click','#id_sign_in',function () {
+          
+          var userName=document.getElementById("user_name").value;
+          var password=document.getElementById("user_password").value;
+          
+          var user = getCurrentUser(userName,password);
+
+          login(user);
+         
+
 
         });
-        $content.on('click','#id_sing_cancel',function () {
+        $content.on('click','#id_sign_cancel',function () {
           $.alert('点击取消');
           
         });
@@ -72,16 +80,37 @@ $(function(){
     });
     //Offine E-CAF page event.
     $(document).on("pageInit", "#page-offine", function(e, pageId, $page) {
-        $.alert('Here goes alert text', 'Custom Title!');
+        $.alert('page-offine inited');
         
     });
     //New Offine E-CAF page event.
     $(document).on("pageInit", "#page-new-offine", function(e, pageId, $page) {
-        $.alert('Here goes alert text', 'Custom Title!');
+        $.alert('page-new-offine inited');
         
     });
    
 
     
-    $.init();
+    $.init();//注意：必须在所有page页面初始话之后调用。
+    
 });
+function getCurrentUser(name,password){
+     this.name = name;
+     this.password = password;
+     return this;
+}
+function login(user){
+    var userName = user.name;
+    var password = user.password;
+    if (userName == "" || userName == null) {
+        $.alert("用户名不能为空");
+        return false;
+    } else if (password == "" || password == null) {
+        $.alert("密码不能为空");
+        return false;
+    } else {
+        //do something for login
+        $.alert("name:"+user.name+"   password:"+user.password);
+        return true;
+    }
+}
