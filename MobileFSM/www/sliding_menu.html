@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>MobileFSM XXXX</title>
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="author" content="chenlu@globalroam.com">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.5.7/css/sm.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.5.7/css/??sm.min.css,sm-extend.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="page" id="page-sliding_menu" >
+      <header class="bar bar-nav">
+        <a class="icon icon-me pull-left open-panel" data-panel=".panel-left">Service Activity List</a>
+        
+        <a class="icon icon-refresh pull-right"></a>
+      </header>
+      <!-- 内容填充区 -->
+      <div class="content" id="">
+        <div class="content-padded ">          
+         <div class="tabs">
+           <div class="tab active" id="tab1">this is tab1</div>
+           <div class="tab" id="tab2">this is tab2</div>
+           <div class="tab" id="tab3">this is tab3</div>
+           <div class="tab" id="tab4">this is tab4</div>
+           <div class="tab" id="tab5">this is tab5</div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-overlay"></div>
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal theme-dark" id='panel-left'>
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <a href="#tab1" class="item-title label custom">List SA</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <a href="#tab2" class="item-title label custom">Notification</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <a href="#tab3" class="item-title label custom">Check CPF</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <a href="#tab4" class="item-title label custom">Software Versio</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <a href="#tab5" class="item-title label custom">Logout</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.5.7/js/sm.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.5.7/js/sm-extend.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/index.js' charset='utf-8'></script>
+  </body>
+</html>

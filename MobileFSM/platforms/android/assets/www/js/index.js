@@ -171,14 +171,8 @@ $(document).on('click','.open-signature-modal', function () {
               '</div>',
       text: '<div class="_mode_text" id="signature_name">'+
                 '<p class="pull-left">Please Sign below...</p>'+
-                '<div id="content">'+
-                    '<div id="signatureparent">'+
-                       '<div id="signature"></div></div>'+
-                    '</div>'+
-                '</div>'
+            '</div>'
 
     })
-    // $('#cancle_sign').bind('click',function(){
-    //     $.alert("djlasj");
-    // });
+   
 });
