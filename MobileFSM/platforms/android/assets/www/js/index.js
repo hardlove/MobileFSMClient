@@ -162,3 +162,23 @@ function resetAllDatas(){
         }
     }
 };
+$(document).on('click','.open-signature-modal', function () {
+    $.modal({
+      title:  '<div class="buttons-row">'+
+                '<button id="cancle_sign" class="tab-link button active"}">Cancel</button>'+
+                '<button class="tab-link button">Clear</button>'+
+                '<button class="tab-link button">Save</button>'+
+              '</div>',
+      text: '<div class="_mode_text" id="signature_name">'+
+                '<p class="pull-left">Please Sign below...</p>'+
+                '<div id="content">'+
+                    '<div id="signatureparent">'+
+                       '<div id="signature"></div></div>'+
+                    '</div>'+
+                '</div>'
+
+    })
+    // $('#cancle_sign').bind('click',function(){
+    //     $.alert("djlasj");
+    // });
+});

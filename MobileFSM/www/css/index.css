@@ -164,6 +164,9 @@ _.content {
 ._text_padding {
     padding-left: 0.6rem;
 }
+._mode_text {
+    height: 8rem;
+}
 /**以下为默认样式修改**/
 .content-block-title {
     position: relative;
