@@ -110,8 +110,38 @@ $(function(){
             $.alert("haved reset all datas.");
         });
     });
-   
+    //Sliding Memu page event.
+    $(document).on("pageInit", "#page-sliding_menu", function(e, id, page) {
+        $.alert('page-sliding_menu inited');
+        var $content = $(page).find('.content');
+        $content.on('click','a',function () {
+          $.alert('diandao');
+          // var menuTitle=document.getElementById("#menu_title");
+          // var tabId = menuTitle.id;
+          // var newTitle="";
+          // switch(tabId){
+          //   case tab1:
+          //       newTitle="a";
+          //       break;
+          //   case tab2:
+          //       newTitle="b";
+          //       break;
+          //   case tab3:
+          //       newTitle="c";
+          //       break;
+          //   case tab4:
+          //       newTitle="d";
+          //       break;
+          //   case tab5:
+          //       newTitle="e";
+          //       break;
+          //   default:
+          // }
+          // menuTitle.innerHTML=newTitle;
 
+        });
+    });
+   
     
     $.init();//注意：必须在所有page页面初始话之后调用。
     
